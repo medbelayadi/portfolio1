@@ -8,53 +8,62 @@
   <script src="https://kit.fontawesome.com/ccc90c6952.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!-- Loading Screen -->
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+</div>
+
 <div id="header">
   <div class="container">
     <nav>
       <div class="logo1">
-          <img src="images/logo1.png" alt="">
-     </div>
+        <img src="images/logo1.png" alt="Logo">
+      </div>
       
-      <ul>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul id="nav-menu">
         <li><a href="#header">Home</a></li>    
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
-
-
       </ul>
     </nav>
-      <div class="content">
-   <div class="home-col-1">
-      <p>Web/Mobile Developer</p>
-      <h1>Hi, I'm <span>Mohamed</span> Belayadi<br>From Tunisia</h1>
-    </div>
-    <div class="home-col-2">
-      <img src="images/bouji111.png" alt="">
-
+    
+    <div class="content">
+      <div class="home-col-1">
+        <p class="animate-on-scroll">Web/Mobile Developer</p>
+        <h1 class="animate-on-scroll">Hi, I'm <span>Mohamed</span> Belayadi<br>From Tunisia</h1>
+      </div>
+      <div class="home-col-2">
+        <img src="images/bouji111.png" alt="Mohamed Belayadi" class="animate-on-scroll">
+      </div>
     </div>
   </div>
 </div>
-  </div>
 
 <!-------------------about-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
- <div id="about">
+<div id="about">
   <div class="container">
     <div class="row">
       <div class="about-col-1">
-        <img src="images/bouji11.png">
+        <img src="images/bouji11.png" class="animate-on-scroll" alt="About Mohamed">
       </div>
       <div class="about-col-2">
-        <h1 class="sub-title">About Me </h1>
-        <p>
+        <h1 class="sub-title animate-on-scroll">About Me</h1>
+        <p class="animate-on-scroll">
           I am a second-year software engineering student, passionate about web and mobile development. I present myself as a young developer, actively working on web and mobile applications. I specialize in mobile app development using Flutter and Android Studio, leveraging languages such as Dart, XML, and Java. My goal is to acquire strong skills in development and contribute to creating functional and attractive websites, as well as intuitive and high-performance mobile applications. I have a solid understanding of programming languages such as HTML, CSS, and JavaScript, as well as the WordPress ecosystem. I am motivated, curious, and always eager to learn new technologies to enhance my development skills.
         </p>
-        <div class="tab-titles">
+        <div class="tab-titles animate-on-scroll">
           <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-links"onclick="opentab('experience')">Experience</p>
-          <p class="tab-links"onclick="opentab('education')">Education</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
         </div>
         <div class="tab-contents active-tab" id="skills">
           <ul>
@@ -64,147 +73,228 @@
               - Python → Django. 
             </li>
             <li><span>Mobile Development</span><br>
-              - Android Studio → Java xml
-              <br>
-
+              - Android Studio → Java xml<br>
               - Dart → Flutter<br>
-             
-          
             </li>
           </ul>
         </div>
         <div class="tab-contents" id="experience">
           <ul>
             <li><span>2024</span><br>Freelance Mobile App Developer<br>
-              Built a cross-platform business directory app using Flutter and Firebase, featuring real-time location, user login, and modern UI/UX.  </span></li>
-          
-
-
+              Built a cross-platform business directory app using Flutter and Firebase, featuring real-time location, user login, and modern UI/UX.</li>
           </ul>
         </div>
         <div class="tab-contents" id="education">
           <ul>
             <li><span>2021 - Present</span><br>Engineering Degree in Software<br>At Engineering
               Private Higher School of Engineering and Technology (ESSAT), Gabès<br>
-              
               Currently a 2nd-year engineering student specializing in software engineering.<br>
-              Completed various academic and personal projects in web development, mobile development, and data management.
-              </span></li>
-          
-
-
+              Completed various academic and personal projects in web development, mobile development, and data management.</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
- </div>
- <!-------------------services-------------------->
- <div id="services">
+</div>
+
+<!-------------------services-------------------->
+<div id="services">
   <div class="container">
-    <h1 class="sub-title">My Services </h1>
+    <h1 class="sub-title animate-on-scroll">My Services</h1>
     <div class="services-list">
-      <div>
+      <div class="animate-on-scroll">
         <i class="fa-solid fa-code"></i>
         <h2>Web Development</h2>
-        <p>Developing modern, responsive web applications using HTML, CSS, JavaScript, PHP, and Python. Creating intuitive user interfaces with frameworks like Bootstrap and React. Responsibilities include building mobile-responsive and progressive web applications (PWA), implementing clean front-end components, and integrating scalable backends using technologies like MySQL . Focused on delivering seamless user experiences and efficient data handling on the web.</p>
+        <p>Developing modern, responsive web applications using HTML, CSS, JavaScript, PHP, and Python. Creating intuitive user interfaces with frameworks like Bootstrap and React. Responsibilities include building mobile-responsive and progressive web applications (PWA), implementing clean front-end components, and integrating scalable backends using technologies like MySQL. Focused on delivering seamless user experiences and efficient data handling on the web.</p>
         <a href="project1.html">Learn more</a>
-
-
       </div>
       
-      <div>
+      <div class="animate-on-scroll">
         <i class="fa-brands fa-app-store"></i>
-        <h2>mobile App Development</h2>
-        <p>
-          Building cross-platform mobile apps using Flutter and Dart, ensuring high performance and a native feel on both Android and iOS. Tasks involve designing elegant and intuitive UIs, integrating real-time features via Firebase, and optimizing performance across devices. Experienced in developing mobile-responsive UIs and deploying scalable applications with a consistent user experience.</p>
+        <h2>Mobile App Development</h2>
+        <p>Building cross-platform mobile apps using Flutter and Dart, ensuring high performance and a native feel on both Android and iOS. Tasks involve designing elegant and intuitive UIs, integrating real-time features via Firebase, and optimizing performance across devices. Experienced in developing mobile-responsive UIs and deploying scalable applications with a consistent user experience.</p>
         <a href="#">Learn more</a>
-        
-
       </div>
     </div>
   </div>
- </div>
- <!-------------------portfolio-------------------->
- <div id="portfolio">
+</div>
+
+<!-------------------portfolio-------------------->
+<div id="portfolio">
   <div class="container">
-    <h1 class="sub-title">My Work</h1>
+    <h1 class="sub-title animate-on-scroll">My Work</h1>
     <div class="work-list">
-      <div class="work">
-        <img src="images/2.png" >
+      <div class="work animate-on-scroll">
+        <img src="images/2.png" alt="Spendy App">
         <div class="layer">
           <h3>Spendy</h3>
-          <p>Spendy is a user-friendly mobile app designed to help individuals track their expenses, manage budgets, and achieve financial goals efficiently.
-          </p>
+          <p>Spendy is a user-friendly mobile app designed to help individuals track their expenses, manage budgets, and achieve financial goals efficiently.</p>
           <a href="project1.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
-      <div class="work"><img src="images/1.png" >
+      <div class="work animate-on-scroll">
+        <img src="images/1.png" alt="SmartCima App">
         <div class="layer">
           <h3>SmartCima</h3>
-          <p> SmartCima is a stylish movie ticket booking app with showtime selection, seat reservation, digital tickets, and a personalized user experience.</p>
+          <p>SmartCima is a stylish movie ticket booking app with showtime selection, seat reservation, digital tickets, and a personalized user experience.</p>
           <a href="project2.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
-        
       </div>
-      <div class="work"><img src="images/3.png" >
+      <div class="work animate-on-scroll">
+        <img src="images/3.png" alt="IDEAL Club Website">
         <div class="layer">
-          <h3>IDEAL Club website</h3>
-          <p> A dynamic, interactive club website that blends innovation, learning, and entertainment through modern web technologies and creative design.</p>
+          <h3>IDEAL Club Website</h3>
+          <p>A dynamic, interactive club website that blends innovation, learning, and entertainment through modern web technologies and creative design.</p>
           <a href="project3.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
-        
       </div>
     </div>
-    <a href="#" class="btn">See more</a>
+    <a href="#" class="btn animate-on-scroll">See more</a>
   </div>
- </div>
-  <!-------------------contact--------------------------------------------------------------------------->
-  <div id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="contact-left">
-          <h1 class="sub-title"> Contact Me</h1>
-          <p><i class="fa-solid fa-paper-plane"></i>Mohamedbelayadi4@gmail.com</p>
-          <p><i class="fa-solid fa-phone"></i>+21629761270</p>
-          <div class="social-icons">
-           
-            <a herf="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-          </div>
-          <a href="cv.pdf" download class="btn btn2">Download Cv</a>
+</div>
+
+<!-------------------contact--------------------------------------------------------------------------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title animate-on-scroll">Contact Me</h1>
+        <p class="animate-on-scroll"><i class="fa-solid fa-paper-plane"></i>Mohamedbelayadi4@gmail.com</p>
+        <p class="animate-on-scroll"><i class="fa-solid fa-phone"></i>+21629761270</p>
+        <div class="social-icons animate-on-scroll">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
         </div>
-        <div class="contact-right">
-          <form>
-            <input type="text" name="Name" placeholder="Your Name"required >
-            <input type="email" name="Email" placeholder="Your Email"required >
-            <textarea name="Message" rows="6" placeholder="Your Message"required ></textarea>
-            <button type="submit" class="btn btn2">Submit</button>
-
-          </form>
-
-        </div>
-
+        <a href="cv.pdf" download class="btn btn2 animate-on-scroll">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form class="animate-on-scroll">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
       </div>
     </div>
-    <div class="copyright">
-      <p>&copy; 2024 All rights reserved | This template is made by BOUJI   </p>
-    </div>
   </div>
+  <div class="copyright">
+    <p>&copy; 2024 All rights reserved | This template is made by BOUJI</p>
+  </div>
+</div>
 
- <script>
+<!-- Scroll to top button -->
+<a href="#header" class="scroll-top" id="scroll-top">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<script>
+  // Loading screen
+  window.addEventListener('load', function() {
+    const loading = document.getElementById('loading');
+    setTimeout(() => {
+      loading.classList.add('hidden');
+    }, 1000);
+  });
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuToggle.addEventListener('click', function() {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Close mobile menu when clicking on a link
+  const navLinks = document.querySelectorAll('nav ul li a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // Tab functionality
   var tablinks = document.getElementsByClassName("tab-links");
   var tabcontents = document.getElementsByClassName("tab-contents");
-  function opentab(tabname){
-    for(tablink of tablinks){
+  
+  function opentab(tabname) {
+    for(tablink of tablinks) {
       tablink.classList.remove("active-link");
     }
-    for(tabcontent of tabcontents){
+    for(tabcontent of tabcontents) {
       tabcontent.classList.remove("active-tab");
     }
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
   }
- </script>
+
+  // Scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with animate-on-scroll class
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Scroll to top button
+  const scrollTopBtn = document.getElementById('scroll-top');
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Add typing effect to the main title
+  function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    function type() {
+      if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+    type();
+  }
+
+  // Initialize typing effect after page load
+  setTimeout(() => {
+    const titleElement = document.querySelector('.home-col-1 h1');
+    if (titleElement) {
+      const originalText = titleElement.textContent;
+      typeWriter(titleElement, originalText, 50);
+    }
+  }, 1500);
+</script>
 </body>
 </html>
