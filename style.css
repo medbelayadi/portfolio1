@@ -1,300 +1,895 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohamed Belayadi</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/ccc90c6952.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<!-- Loading Screen -->
-<div class="loading" id="loading">
-  <div class="spinner"></div>
-</div>
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
 
-<div id="header">
-  <div class="container">
-    <nav>
-      <div class="logo1">
-        <img src="images/logo1.png" alt="Logo">
-      </div>
-      
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      
-      <ul id="nav-menu">
-        <li><a href="#header">Home</a></li>    
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    
-    <div class="content">
-      <div class="home-col-1">
-        <p class="animate-on-scroll">Web/Mobile Developer</p>
-        <h1 class="animate-on-scroll">Hi, I'm <span>Mohamed</span> Belayadi<br>From Tunisia</h1>
-      </div>
-      <div class="home-col-2">
-        <img src="images/bouji111.png" alt="Mohamed Belayadi" class="animate-on-scroll">
-      </div>
-    </div>
-  </div>
-</div>
+html {
+  scroll-behavior: smooth;
+}
 
-<!-------------------about-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+body {
+  background: #080808;
+  color: #fff;
+  overflow-x: hidden;
+}
 
-<div id="about">
-  <div class="container">
-    <div class="row">
-      <div class="about-col-1">
-        <img src="images/bouji11.png" class="animate-on-scroll" alt="About Mohamed">
-      </div>
-      <div class="about-col-2">
-        <h1 class="sub-title animate-on-scroll">About Me</h1>
-        <p class="animate-on-scroll">
-          I am a second-year software engineering student, passionate about web and mobile development. I present myself as a young developer, actively working on web and mobile applications. I specialize in mobile app development using Flutter and Android Studio, leveraging languages such as Dart, XML, and Java. My goal is to acquire strong skills in development and contribute to creating functional and attractive websites, as well as intuitive and high-performance mobile applications. I have a solid understanding of programming languages such as HTML, CSS, and JavaScript, as well as the WordPress ecosystem. I am motivated, curious, and always eager to learn new technologies to enhance my development skills.
-        </p>
-        <div class="tab-titles animate-on-scroll">
-          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-links" onclick="opentab('experience')">Experience</p>
-          <p class="tab-links" onclick="opentab('education')">Education</p>
-        </div>
-        <div class="tab-contents active-tab" id="skills">
-          <ul>
-            <li><span>Web Development</span><br>
-              - HTML, CSS, JavaScript → React.js, Bootstrap.<br> 
-              - PHP → Laravel.<br> 
-              - Python → Django. 
-            </li>
-            <li><span>Mobile Development</span><br>
-              - Android Studio → Java xml<br>
-              - Dart → Flutter<br>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-contents" id="experience">
-          <ul>
-            <li><span>2024</span><br>Freelance Mobile App Developer<br>
-              Built a cross-platform business directory app using Flutter and Firebase, featuring real-time location, user login, and modern UI/UX.</li>
-          </ul>
-        </div>
-        <div class="tab-contents" id="education">
-          <ul>
-            <li><span>2021 - Present</span><br>Engineering Degree in Software<br>At Engineering
-              Private Higher School of Engineering and Technology (ESSAT), Gabès<br>
-              Currently a 2nd-year engineering student specializing in software engineering.<br>
-              Completed various academic and personal projects in web development, mobile development, and data management.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+/* Animations keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-<!-------------------services-------------------->
-<div id="services">
-  <div class="container">
-    <h1 class="sub-title animate-on-scroll">My Services</h1>
-    <div class="services-list">
-      <div class="animate-on-scroll">
-        <i class="fa-solid fa-code"></i>
-        <h2>Web Development</h2>
-        <p>Developing modern, responsive web applications using HTML, CSS, JavaScript, PHP, and Python. Creating intuitive user interfaces with frameworks like Bootstrap and React. Responsibilities include building mobile-responsive and progressive web applications (PWA), implementing clean front-end components, and integrating scalable backends using technologies like MySQL. Focused on delivering seamless user experiences and efficient data handling on the web.</p>
-        <a href="project1.html">Learn more</a>
-      </div>
-      
-      <div class="animate-on-scroll">
-        <i class="fa-brands fa-app-store"></i>
-        <h2>Mobile App Development</h2>
-        <p>Building cross-platform mobile apps using Flutter and Dart, ensuring high performance and a native feel on both Android and iOS. Tasks involve designing elegant and intuitive UIs, integrating real-time features via Firebase, and optimizing performance across devices. Experienced in developing mobile-responsive UIs and deploying scalable applications with a consistent user experience.</p>
-        <a href="#">Learn more</a>
-      </div>
-    </div>
-  </div>
-</div>
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-<!-------------------portfolio-------------------->
-<div id="portfolio">
-  <div class="container">
-    <h1 class="sub-title animate-on-scroll">My Work</h1>
-    <div class="work-list">
-      <div class="work animate-on-scroll">
-        <img src="images/2.png" alt="Spendy App">
-        <div class="layer">
-          <h3>Spendy</h3>
-          <p>Spendy is a user-friendly mobile app designed to help individuals track their expenses, manage budgets, and achieve financial goals efficiently.</p>
-          <a href="project1.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="work animate-on-scroll">
-        <img src="images/1.png" alt="SmartCima App">
-        <div class="layer">
-          <h3>SmartCima</h3>
-          <p>SmartCima is a stylish movie ticket booking app with showtime selection, seat reservation, digital tickets, and a personalized user experience.</p>
-          <a href="project2.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="work animate-on-scroll">
-        <img src="images/3.png" alt="IDEAL Club Website">
-        <div class="layer">
-          <h3>IDEAL Club Website</h3>
-          <p>A dynamic, interactive club website that blends innovation, learning, and entertainment through modern web technologies and creative design.</p>
-          <a href="project3.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-    </div>
-    <a href="#" class="btn animate-on-scroll">See more</a>
-  </div>
-</div>
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-<!-------------------contact--------------------------------------------------------------------------->
-<div id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="contact-left">
-        <h1 class="sub-title animate-on-scroll">Contact Me</h1>
-        <p class="animate-on-scroll"><i class="fa-solid fa-paper-plane"></i>Mohamedbelayadi4@gmail.com</p>
-        <p class="animate-on-scroll"><i class="fa-solid fa-phone"></i>+21629761270</p>
-        <div class="social-icons animate-on-scroll">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <a href="cv.pdf" download class="btn btn2 animate-on-scroll">Download CV</a>
-      </div>
-      <div class="contact-right">
-        <form class="animate-on-scroll">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="Email" placeholder="Your Email" required>
-          <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn btn2">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="copyright">
-    <p>&copy; 2024 All rights reserved | This template is made by BOUJI</p>
-  </div>
-</div>
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 
-<!-- Scroll to top button -->
-<a href="#header" class="scroll-top" id="scroll-top">
-  <i class="fa-solid fa-arrow-up"></i>
-</a>
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-<script>
-  // Loading screen
-  window.addEventListener('load', function() {
-    const loading = document.getElementById('loading');
-    setTimeout(() => {
-      loading.classList.add('hidden');
-    }, 1000);
-  });
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-  // Mobile menu toggle
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
+/* Classes d'animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
 
-  menuToggle.addEventListener('click', function() {
-    menuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  // Close mobile menu when clicking on a link
-  const navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      navMenu.classList.remove('active');
-    });
-  });
+/* Loading Screen */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
 
-  // Tab functionality
-  var tablinks = document.getElementsByClassName("tab-links");
-  var tabcontents = document.getElementsByClassName("tab-contents");
-  
-  function opentab(tabname) {
-    for(tablink of tablinks) {
-      tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents) {
-      tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+.loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #333;
+  border-top: 3px solid #ff004f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Header */
+#header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #080808 0%, #1a1a1a 100%);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 0, 79, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 0, 79, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.container {
+  padding: 10px 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo1 img {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.logo1 img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: linear-gradient(45deg, #ff004f, #ff6b9d);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #ff004f;
+}
+
+/* Menu mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Content */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  min-height: 70vh;
+}
+
+.home-col-1 {
+  flex: 1;
+  font-size: 30px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.home-col-1 p {
+  font-size: 20px;
+  color: #ff004f;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.home-col-1 h1 {
+  font-size: 45px;
+  margin-top: 20px;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.home-col-1 h1 span {
+  color: #ff004f;
+  position: relative;
+}
+
+.home-col-1 h1 span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(45deg, #ff004f, #ff6b9d);
+  animation: pulse 2s infinite;
+}
+
+.home-col-2 {
+  flex: 1;
+  text-align: center;
+  animation: fadeInRight 1s ease-out 0.6s both;
+}
+
+.home-col-2 img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.home-col-2 img:hover {
+  transform: scale(1.05);
+}
+
+/* About Section */
+#about {
+  padding: 100px 0;
+  color: #ababab;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+  min-width: 300px;
+}
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.about-col-1 img:hover {
+  transform: scale(1.05);
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+  min-width: 300px;
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.sub-title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(45deg, #ff004f, #ff6b9d);
+  bottom: -10px;
+  left: 0;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+  flex-wrap: wrap;
+}
+
+.tab-links {
+  margin-right: 50px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: width 0.3s ease;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-links:hover {
+  color: #ff004f;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-left: 3px solid transparent;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.tab-contents ul li:hover {
+  border-left-color: #ff004f;
+  transform: translateX(10px);
+}
+
+.tab-contents ul li span {
+  color: #ff004f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tab-contents {
+  display: none;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* Services */
+#services {
+  padding: 100px 0;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: linear-gradient(135deg, #262626 0%, #1a1a1a 100%);
+  padding: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-list div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 79, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.services-list div:hover::before {
+  left: 100%;
+}
+
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #ff004f;
+  transition: transform 0.3s ease;
+}
+
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: #ff004f;
+  font-size: 14px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.services-list div a:hover {
+  border-bottom-color: #ff004f;
+  transform: translateX(5px);
+}
+
+.services-list div:hover {
+  background: linear-gradient(135deg, #ff004f 0%, #ff6b9d 100%);
+  transform: translateY(-10px);
+  border-color: #ff004f;
+  box-shadow: 0 20px 40px rgba(255, 0, 79, 0.3);
+}
+
+.services-list div:hover i {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.services-list div:hover a {
+  color: #fff;
+}
+
+/* Portfolio */
+#portfolio {
+  padding: 100px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.work:hover {
+  transform: translateY(-10px);
+}
+
+.work img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 0, 79, 0.8));
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s ease;
+}
+
+.layer h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.layer p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.layer a:hover {
+  background: #ff004f;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 2px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff004f, #ff6b9d);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  left: 0;
+}
+
+.btn:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 0, 79, 0.3);
+}
+
+/* Contact */
+#contact {
+  padding: 100px 0;
+}
+
+.contact-left {
+  flex-basis: 35%;
+  min-width: 300px;
+}
+
+.contact-right {
+  flex-basis: 60%;
+  min-width: 300px;
+}
+
+.contact-left p {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-left p:hover {
+  transform: translateX(10px);
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid transparent;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+  border-color: #ff004f;
+  background: rgba(255, 0, 79, 0.1);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff004f, #ff6b9d);
+  border: none;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 2px solid #262626;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #ff004f;
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 0, 79, 0.2);
+}
+
+form button {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff004f, #ff6b9d);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 0, 79, 0.3);
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.espacement {
+  padding: 20px;
+}
+
+/* Scroll to top button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #ff004f, #ff6b9d);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 0, 79, 0.3);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
   }
 
-  // Scroll animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-      }
-    });
-  }, observerOptions);
-
-  // Observe all elements with animate-on-scroll class
-  document.querySelectorAll('.animate-on-scroll').forEach(el => {
-    observer.observe(el);
-  });
-
-  // Scroll to top button
-  const scrollTopBtn = document.getElementById('scroll-top');
-  
-  window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 300) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  });
-
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-
-  // Add typing effect to the main title
-  function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    function type() {
-      if (i < text.length) {
-        element.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, speed);
-      }
-    }
-    type();
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(8, 8, 8, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+    backdrop-filter: blur(10px);
   }
 
-  // Initialize typing effect after page load
-  setTimeout(() => {
-    const titleElement = document.querySelector('.home-col-1 h1');
-    if (titleElement) {
-      const originalText = titleElement.textContent;
-      typeWriter(titleElement, originalText, 50);
-    }
-  }, 1500);
-</script>
-</body>
-</html>
+  nav ul.active {
+    left: 0;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  nav ul li a {
+    font-size: 24px;
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .home-col-1 {
+    order: 2;
+    margin-top: 30px;
+  }
+
+  .home-col-1 h1 {
+    font-size: 35px;
+  }
+
+  .home-col-2 {
+    order: 1;
+    width: 100%;
+  }
+
+  .home-col-2 img {
+    width: 60%;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+    min-width: auto;
+  }
+
+  .tab-titles {
+    justify-content: center;
+  }
+
+  .tab-links {
+    margin-right: 30px;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .work-list {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 10px 5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home-col-1 h1 {
+    font-size: 28px;
+  }
+
+  .home-col-1 p {
+    font-size: 16px;
+  }
+
+  .sub-title {
+    font-size: 32px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .services-list div {
+    padding: 30px 20px;
+  }
+
+  .layer {
+    padding: 0 20px;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
